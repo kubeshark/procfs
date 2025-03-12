@@ -21,7 +21,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/kubeshark/procfs/internal/util"
 )
 
 // ProcSnmp models the content of /proc/<pid>/net/snmp.

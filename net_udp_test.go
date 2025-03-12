@@ -120,7 +120,7 @@ func Test_newNetUDP(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := newNetUDP(tt.file)
+			got, err := NewNetUDP(tt.file)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("newNetUDP() error = %v, wantErr %v", err, tt.wantErr)
 				return

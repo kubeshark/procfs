@@ -22,9 +22,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prometheus/procfs"
-	"github.com/prometheus/procfs/internal/fs"
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/kubeshark/procfs"
+	"github.com/kubeshark/procfs/internal/fs"
+	"github.com/kubeshark/procfs/internal/util"
 )
 
 // FS represents the pseudo-filesystem sys, which provides an interface to

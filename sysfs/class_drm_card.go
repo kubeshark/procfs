@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/kubeshark/procfs/internal/util"
 )
 
 const drmClassPath = "class/drm"

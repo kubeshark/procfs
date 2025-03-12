@@ -26,6 +26,6 @@ linters-settings:
     # Ignore "See: URL"
     - 'See:'
   goimports:
-      local-prefixes: github.com/prometheus/procfs
+      local-prefixes: github.com/kubeshark/procfs
   misspell:
     locale: US

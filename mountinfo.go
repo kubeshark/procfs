@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/kubeshark/procfs/internal/util"
 )
 
 // A MountInfo is a type that describes the details, options

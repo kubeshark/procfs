@@ -27,14 +27,14 @@ type (
 // read from /proc/net/tcp.
 // Deprecated: Use github.com/mdlayher/netlink#Conn (with syscall.AF_INET) instead.
 func (fs FS) NetTCP() (NetTCP, error) {
-	return newNetTCP(fs.proc.Path("net/tcp"))
+	return NewNetTCP(fs.proc.Path("net/tcp"))
 }
 
 // NetTCP6 returns the IPv6 kernel/networking statistics for TCP datagrams
 // read from /proc/net/tcp6.
 // Deprecated: Use github.com/mdlayher/netlink#Conn (with syscall.AF_INET6) instead.
 func (fs FS) NetTCP6() (NetTCP, error) {
-	return newNetTCP(fs.proc.Path("net/tcp6"))
+	return NewNetTCP(fs.proc.Path("net/tcp6"))
 }
 
 // NetTCPSummary returns already computed statistics like the total queue lengths
@@ -51,8 +51,8 @@ func (fs FS) NetTCP6Summary() (*NetTCPSummary, error) {
 	return newNetTCPSummary(fs.proc.Path("net/tcp6"))
 }
 
-// newNetTCP creates a new NetTCP{,6} from the contents of the given file.
-func newNetTCP(file string) (NetTCP, error) {
+// NewNetTCP creates a new NetTCP{,6} from the contents of the given file.
+func NewNetTCP(file string) (NetTCP, error) {
 	n, err := newNetIPSocket(file)
 	n1 := NetTCP(n)
 	return n1, err

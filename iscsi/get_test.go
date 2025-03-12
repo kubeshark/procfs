@@ -17,7 +17,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/prometheus/procfs/iscsi"
+	"github.com/kubeshark/procfs/iscsi"
 )
 
 func TestGetStats(t *testing.T) {
